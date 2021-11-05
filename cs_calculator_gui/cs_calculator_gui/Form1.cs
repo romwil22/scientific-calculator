@@ -17,19 +17,81 @@ namespace cs_calculator_gui
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void num0_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("button test");
+            calcuDisplay.Text = calcuDisplay.Text + "0";
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void point_Click(object sender, EventArgs e)
         {
-
+            calcuDisplay.Text = calcuDisplay.Text + ".";
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void num1_Click(object sender, EventArgs e)
+        {
+            calcuDisplay.Text = calcuDisplay.Text + "1";
+        }
+
+        private void num2_Click(object sender, EventArgs e)
+        {
+            calcuDisplay.Text = calcuDisplay.Text + "2";
+        }
+
+        private void num3_Click(object sender, EventArgs e)
+        {
+            calcuDisplay.Text = calcuDisplay.Text + "3";
+        }
+
+        private void num4_Click(object sender, EventArgs e)
+        {
+            calcuDisplay.Text = calcuDisplay.Text + "4";
+        }
+
+        private void num5_Click(object sender, EventArgs e)
+        {
+            calcuDisplay.Text = calcuDisplay.Text + "5";
+        }
+
+        private void num6_Click(object sender, EventArgs e)
+        {
+            calcuDisplay.Text = calcuDisplay.Text + "6";
+        }
+
+        private void num7_Click(object sender, EventArgs e)
+        {
+            calcuDisplay.Text = calcuDisplay.Text + "7";
+        }
+
+        private void num8_Click(object sender, EventArgs e)
+        {
+            calcuDisplay.Text = calcuDisplay.Text + "8";
+        }
+
+        private void num9_Click(object sender, EventArgs e)
+        {
+            calcuDisplay.Text = calcuDisplay.Text + "9";
+        }
+
+        private void plus_Click(object sender, EventArgs e)
+        {
+            calcuDisplay.Text = calcuDisplay.Text + "+";
+        }
+
+        private void minus_Click(object sender, EventArgs e)
+        {
+            calcuDisplay.Text = calcuDisplay.Text + "-";
+        }
+
+        private void multiple_Click(object sender, EventArgs e)
         {
 
+            calcuDisplay.Text = calcuDisplay.Text + "x";
+        }
+
+        private void divide_Click(object sender, EventArgs e)
+        {
+            
+            calcuDisplay.Text = calcuDisplay.Text + "/";
         }
     }
 }
