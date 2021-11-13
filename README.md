@@ -1,1 +1,1 @@
-# OOP assignment2 - Calculator GUI
+# OOP SciCal - Project
