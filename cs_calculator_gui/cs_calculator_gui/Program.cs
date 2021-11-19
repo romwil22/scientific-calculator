@@ -16,7 +16,7 @@ namespace cs_calculator_gui
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Calculator());
+            Application.Run(new scienticCalculator());
         }
     }
 }

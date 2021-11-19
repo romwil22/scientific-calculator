@@ -18,3 +18,13 @@ C:\Users\Rom\Desktop\5TH YR 1ST SEM FILES\OOP\cs-assigntment2-calculator\cs_calc
 C:\Users\Rom\Desktop\5TH YR 1ST SEM FILES\OOP\cs-assigntment2-calculator\cs_calculator_gui\cs_calculator_gui\obj\Debug\cs_calculator_gui.csproj.CoreCompileInputs.cache
 C:\Users\Rom\Desktop\5TH YR 1ST SEM FILES\OOP\cs-assigntment2-calculator\cs_calculator_gui\cs_calculator_gui\obj\Debug\cs_calculator_gui.exe
 C:\Users\Rom\Desktop\5TH YR 1ST SEM FILES\OOP\cs-assigntment2-calculator\cs_calculator_gui\cs_calculator_gui\obj\Debug\cs_calculator_gui.pdb
+C:\Users\Rom\Desktop\5TH YR 1ST SEM FILES\OOP\scientific-calculator\cs_calculator_gui\cs_calculator_gui\bin\Debug\cs_calculator_gui.exe.config
+C:\Users\Rom\Desktop\5TH YR 1ST SEM FILES\OOP\scientific-calculator\cs_calculator_gui\cs_calculator_gui\bin\Debug\cs_calculator_gui.exe
+C:\Users\Rom\Desktop\5TH YR 1ST SEM FILES\OOP\scientific-calculator\cs_calculator_gui\cs_calculator_gui\bin\Debug\cs_calculator_gui.pdb
+C:\Users\Rom\Desktop\5TH YR 1ST SEM FILES\OOP\scientific-calculator\cs_calculator_gui\cs_calculator_gui\obj\Debug\cs_calculator_gui.csproj.AssemblyReference.cache
+C:\Users\Rom\Desktop\5TH YR 1ST SEM FILES\OOP\scientific-calculator\cs_calculator_gui\cs_calculator_gui\obj\Debug\cs_calculator_gui.scienticCalculator.resources
+C:\Users\Rom\Desktop\5TH YR 1ST SEM FILES\OOP\scientific-calculator\cs_calculator_gui\cs_calculator_gui\obj\Debug\cs_calculator_gui.Properties.Resources.resources
+C:\Users\Rom\Desktop\5TH YR 1ST SEM FILES\OOP\scientific-calculator\cs_calculator_gui\cs_calculator_gui\obj\Debug\cs_calculator_gui.csproj.GenerateResource.cache
+C:\Users\Rom\Desktop\5TH YR 1ST SEM FILES\OOP\scientific-calculator\cs_calculator_gui\cs_calculator_gui\obj\Debug\cs_calculator_gui.csproj.CoreCompileInputs.cache
+C:\Users\Rom\Desktop\5TH YR 1ST SEM FILES\OOP\scientific-calculator\cs_calculator_gui\cs_calculator_gui\obj\Debug\cs_calculator_gui.exe
+C:\Users\Rom\Desktop\5TH YR 1ST SEM FILES\OOP\scientific-calculator\cs_calculator_gui\cs_calculator_gui\obj\Debug\cs_calculator_gui.pdb
