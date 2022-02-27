@@ -25,7 +25,26 @@ namespace cs_scientific_calculator
             }
 
             Button btn = (Button)sender;
-            result_textbox.Text = btn.Text;
+
+            if (btn.Text == ".")
+            {
+                if (result_textbox.Text.Contains("."))
+                {
+                    result_textbox.Text += btn.Text;
+                }
+                
+            }
+            else
+            {
+                result_textbox.Text += btn.Text;
+            }
+        }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            int strIndex= result_textbox.Text.Length - 1;
+            result_textbox.Text = result_textbox.Text.Remove(strIndex);
+
         }
     }
 }

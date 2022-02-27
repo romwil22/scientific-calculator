@@ -125,6 +125,7 @@ namespace cs_scientific_calculator
             this.back.Size = new System.Drawing.Size(45, 45);
             this.back.TabIndex = 8;
             this.back.UseVisualStyleBackColor = false;
+            this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // e
             // 
@@ -464,6 +465,7 @@ namespace cs_scientific_calculator
             this.period.TabIndex = 11;
             this.period.Text = ".";
             this.period.UseVisualStyleBackColor = false;
+            this.period.Click += new System.EventHandler(this.zero_Click);
             // 
             // zero
             // 
