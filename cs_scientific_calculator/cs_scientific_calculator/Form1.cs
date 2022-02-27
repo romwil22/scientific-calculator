@@ -114,5 +114,17 @@ namespace cs_scientific_calculator
             result = Math.PI;
             result_textbox.Text = result.ToString();
         }
+
+        private void abs_Click(object sender, EventArgs e)
+        {
+            result = Math.Abs(int.Parse(result_textbox.Text));
+            result_textbox.Text = result.ToString();
+        }
+
+        private void exp_Click(object sender, EventArgs e)
+        {
+            result = Math.Exp(double.Parse(result_textbox.Text));
+            result_textbox.Text = result.ToString();
+        }
     }
 }

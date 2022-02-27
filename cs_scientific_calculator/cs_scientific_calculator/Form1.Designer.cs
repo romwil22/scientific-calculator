@@ -194,6 +194,7 @@ namespace cs_scientific_calculator
             this.abs.TabIndex = 11;
             this.abs.Text = "| x |";
             this.abs.UseVisualStyleBackColor = false;
+            this.abs.Click += new System.EventHandler(this.abs_Click);
             // 
             // exp
             // 
@@ -205,6 +206,7 @@ namespace cs_scientific_calculator
             this.exp.TabIndex = 11;
             this.exp.Text = "exp";
             this.exp.UseVisualStyleBackColor = false;
+            this.exp.Click += new System.EventHandler(this.exp_Click);
             // 
             // mod
             // 
