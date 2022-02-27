@@ -45,6 +45,15 @@ namespace cs_scientific_calculator
             int strIndex= result_textbox.Text.Length - 1;
             result_textbox.Text = result_textbox.Text.Remove(strIndex);
 
+            if (result_textbox.Text == "")
+            {
+                result_textbox.Text = "0";
+            }
+        }
+
+        private void ce_Click(object sender, EventArgs e)
+        {
+            result_textbox.Text = "0";
         }
     }
 }

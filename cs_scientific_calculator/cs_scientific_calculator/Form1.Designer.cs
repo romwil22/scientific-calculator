@@ -114,6 +114,7 @@ namespace cs_scientific_calculator
             this.ce.TabIndex = 7;
             this.ce.Text = "CE";
             this.ce.UseVisualStyleBackColor = false;
+            this.ce.Click += new System.EventHandler(this.ce_Click);
             // 
             // back
             // 
