@@ -12,6 +12,7 @@ namespace cs_scientific_calculator
 {
     public partial class sci_cal : Form
     {
+        double plusMinus;
         public sci_cal()
         {
             InitializeComponent();
@@ -54,6 +55,13 @@ namespace cs_scientific_calculator
         private void ce_Click(object sender, EventArgs e)
         {
             result_textbox.Text = "0";
+        }
+
+        private void plus_over_minus_Click(object sender, EventArgs e)
+        {
+            plusMinus = double.Parse(result_textbox.Text);
+            plusMinus = plusMinus * -1;
+            result_textbox.Text = plusMinus.ToString();
         }
     }
 }

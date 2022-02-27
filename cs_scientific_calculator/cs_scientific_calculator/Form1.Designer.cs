@@ -490,6 +490,7 @@ namespace cs_scientific_calculator
             this.plus_over_minus.TabIndex = 11;
             this.plus_over_minus.Text = "+/-";
             this.plus_over_minus.UseVisualStyleBackColor = false;
+            this.plus_over_minus.Click += new System.EventHandler(this.plus_over_minus_Click);
             // 
             // ln
             // 
