@@ -149,6 +149,7 @@ namespace cs_scientific_calculator
             this.pi.TabIndex = 10;
             this.pi.Text = "pi";
             this.pi.UseVisualStyleBackColor = false;
+            this.pi.Click += new System.EventHandler(this.pi_Click);
             // 
             // second
             // 
@@ -271,6 +272,7 @@ namespace cs_scientific_calculator
             this.sqrt.TabIndex = 11;
             this.sqrt.Text = "sqrt";
             this.sqrt.UseVisualStyleBackColor = false;
+            this.sqrt.Click += new System.EventHandler(this.sqrt_Click);
             // 
             // raise_y
             // 
@@ -400,6 +402,7 @@ namespace cs_scientific_calculator
             this.log.TabIndex = 11;
             this.log.Text = "log";
             this.log.UseVisualStyleBackColor = false;
+            this.log.Click += new System.EventHandler(this.log_Click);
             // 
             // one
             // 

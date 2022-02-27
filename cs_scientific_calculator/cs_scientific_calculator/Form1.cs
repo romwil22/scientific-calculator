@@ -14,6 +14,7 @@ namespace cs_scientific_calculator
     {
         double plusMinus;
         double num1;
+        double result;
         String oprtr;
         bool isOp = false;
         public sci_cal()
@@ -94,6 +95,24 @@ namespace cs_scientific_calculator
                     break;
                 
             }
+        }
+
+        private void log_Click(object sender, EventArgs e)
+        {
+            result = Math.Log10(double.Parse(result_textbox.Text));
+            result_textbox.Text = result.ToString();
+        }
+
+        private void sqrt_Click(object sender, EventArgs e)
+        {
+            result = Math.Sqrt(double.Parse(result_textbox.Text));
+            result_textbox.Text = result.ToString();
+        }
+
+        private void pi_Click(object sender, EventArgs e)
+        {
+            result = Math.PI;
+            result_textbox.Text = result.ToString();
         }
     }
 }
