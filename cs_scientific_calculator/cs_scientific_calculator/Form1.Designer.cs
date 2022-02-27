@@ -31,7 +31,6 @@ namespace cs_scientific_calculator
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(sci_cal));
             this.result_textbox = new System.Windows.Forms.TextBox();
-            this.operation_label = new System.Windows.Forms.Label();
             this.trigonometry = new System.Windows.Forms.Button();
             this.function = new System.Windows.Forms.Button();
             this.ce = new System.Windows.Forms.Button();
@@ -74,25 +73,14 @@ namespace cs_scientific_calculator
             // result_textbox
             // 
             this.result_textbox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.result_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.result_textbox.Location = new System.Drawing.Point(12, 36);
+            this.result_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.result_textbox.Location = new System.Drawing.Point(12, 15);
+            this.result_textbox.Multiline = true;
             this.result_textbox.Name = "result_textbox";
-            this.result_textbox.Size = new System.Drawing.Size(249, 29);
+            this.result_textbox.Size = new System.Drawing.Size(249, 39);
             this.result_textbox.TabIndex = 0;
             this.result_textbox.Text = "0";
             this.result_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // operation_label
-            // 
-            this.operation_label.AutoSize = true;
-            this.operation_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.operation_label.Location = new System.Drawing.Point(12, 12);
-            this.operation_label.Name = "operation_label";
-            this.operation_label.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.operation_label.Size = new System.Drawing.Size(76, 20);
-            this.operation_label.TabIndex = 1;
-            this.operation_label.Text = "operation";
-            this.operation_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // trigonometry
             // 
@@ -302,6 +290,7 @@ namespace cs_scientific_calculator
             this.seven.TabIndex = 11;
             this.seven.Text = "7";
             this.seven.UseVisualStyleBackColor = false;
+            this.seven.Click += new System.EventHandler(this.zero_Click);
             // 
             // eight
             // 
@@ -313,6 +302,7 @@ namespace cs_scientific_calculator
             this.eight.TabIndex = 11;
             this.eight.Text = "8";
             this.eight.UseVisualStyleBackColor = false;
+            this.eight.Click += new System.EventHandler(this.zero_Click);
             // 
             // nine
             // 
@@ -324,6 +314,7 @@ namespace cs_scientific_calculator
             this.nine.TabIndex = 11;
             this.nine.Text = "9";
             this.nine.UseVisualStyleBackColor = false;
+            this.nine.Click += new System.EventHandler(this.zero_Click);
             // 
             // times
             // 
@@ -338,13 +329,14 @@ namespace cs_scientific_calculator
             // 
             // minus
             // 
+            this.minus.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.minus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minus.Location = new System.Drawing.Point(217, 311);
             this.minus.Name = "minus";
             this.minus.Size = new System.Drawing.Size(45, 45);
             this.minus.TabIndex = 11;
             this.minus.Text = "-";
-            this.minus.UseVisualStyleBackColor = true;
+            this.minus.UseVisualStyleBackColor = false;
             // 
             // six
             // 
@@ -356,6 +348,7 @@ namespace cs_scientific_calculator
             this.six.TabIndex = 11;
             this.six.Text = "6";
             this.six.UseVisualStyleBackColor = false;
+            this.six.Click += new System.EventHandler(this.zero_Click);
             // 
             // five
             // 
@@ -367,6 +360,7 @@ namespace cs_scientific_calculator
             this.five.TabIndex = 11;
             this.five.Text = "5";
             this.five.UseVisualStyleBackColor = false;
+            this.five.Click += new System.EventHandler(this.zero_Click);
             // 
             // four
             // 
@@ -378,6 +372,7 @@ namespace cs_scientific_calculator
             this.four.TabIndex = 11;
             this.four.Text = "4";
             this.four.UseVisualStyleBackColor = false;
+            this.four.Click += new System.EventHandler(this.zero_Click);
             // 
             // raise_x
             // 
@@ -411,6 +406,7 @@ namespace cs_scientific_calculator
             this.one.TabIndex = 11;
             this.one.Text = "1";
             this.one.UseVisualStyleBackColor = false;
+            this.one.Click += new System.EventHandler(this.zero_Click);
             // 
             // two
             // 
@@ -422,6 +418,7 @@ namespace cs_scientific_calculator
             this.two.TabIndex = 11;
             this.two.Text = "2";
             this.two.UseVisualStyleBackColor = false;
+            this.two.Click += new System.EventHandler(this.zero_Click);
             // 
             // three
             // 
@@ -433,6 +430,7 @@ namespace cs_scientific_calculator
             this.three.TabIndex = 11;
             this.three.Text = "3";
             this.three.UseVisualStyleBackColor = false;
+            this.three.Click += new System.EventHandler(this.zero_Click);
             // 
             // plus
             // 
@@ -477,6 +475,7 @@ namespace cs_scientific_calculator
             this.zero.TabIndex = 11;
             this.zero.Text = "0";
             this.zero.UseVisualStyleBackColor = false;
+            this.zero.Click += new System.EventHandler(this.zero_Click);
             // 
             // plus_over_minus
             // 
@@ -543,7 +542,6 @@ namespace cs_scientific_calculator
             this.Controls.Add(this.ce);
             this.Controls.Add(this.function);
             this.Controls.Add(this.trigonometry);
-            this.Controls.Add(this.operation_label);
             this.Controls.Add(this.result_textbox);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -560,7 +558,6 @@ namespace cs_scientific_calculator
         #endregion
 
         private System.Windows.Forms.TextBox result_textbox;
-        private System.Windows.Forms.Label operation_label;
         private System.Windows.Forms.Button trigonometry;
         private System.Windows.Forms.Button function;
         private System.Windows.Forms.Button ce;

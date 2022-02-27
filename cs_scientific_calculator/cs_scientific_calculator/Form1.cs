@@ -16,5 +16,16 @@ namespace cs_scientific_calculator
         {
             InitializeComponent();
         }
+
+        private void zero_Click(object sender, EventArgs e)
+        {
+            if (result_textbox.Text == "0")
+            {
+                result_textbox.Clear();
+            }
+
+            Button btn = (Button)sender;
+            result_textbox.Text = btn.Text;
+        }
     }
 }
