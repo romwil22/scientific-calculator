@@ -226,6 +226,7 @@ namespace cs_scientific_calculator
             this.divide.TabIndex = 11;
             this.divide.Text = "/";
             this.divide.UseVisualStyleBackColor = false;
+            this.divide.Click += new System.EventHandler(this.times_Click);
             // 
             // factorial
             // 
@@ -321,13 +322,14 @@ namespace cs_scientific_calculator
             // times
             // 
             this.times.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.times.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.times.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.times.Location = new System.Drawing.Point(216, 260);
             this.times.Name = "times";
             this.times.Size = new System.Drawing.Size(45, 45);
             this.times.TabIndex = 11;
-            this.times.Text = "X";
+            this.times.Text = "*";
             this.times.UseVisualStyleBackColor = false;
+            this.times.Click += new System.EventHandler(this.times_Click);
             // 
             // minus
             // 
@@ -339,6 +341,7 @@ namespace cs_scientific_calculator
             this.minus.TabIndex = 11;
             this.minus.Text = "-";
             this.minus.UseVisualStyleBackColor = false;
+            this.minus.Click += new System.EventHandler(this.times_Click);
             // 
             // six
             // 
@@ -444,6 +447,7 @@ namespace cs_scientific_calculator
             this.plus.TabIndex = 11;
             this.plus.Text = "+";
             this.plus.UseVisualStyleBackColor = false;
+            this.plus.Click += new System.EventHandler(this.times_Click);
             // 
             // equal
             // 
@@ -455,6 +459,7 @@ namespace cs_scientific_calculator
             this.equal.TabIndex = 11;
             this.equal.Text = "=";
             this.equal.UseVisualStyleBackColor = false;
+            this.equal.Click += new System.EventHandler(this.equal_Click);
             // 
             // period
             // 

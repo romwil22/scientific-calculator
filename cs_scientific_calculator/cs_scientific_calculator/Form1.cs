@@ -13,6 +13,9 @@ namespace cs_scientific_calculator
     public partial class sci_cal : Form
     {
         double plusMinus;
+        double num1;
+        String oprtr;
+        bool isOp = false;
         public sci_cal()
         {
             InitializeComponent();
@@ -20,11 +23,11 @@ namespace cs_scientific_calculator
 
         private void zero_Click(object sender, EventArgs e)
         {
-            if (result_textbox.Text == "0")
+            if (result_textbox.Text == "0" || isOp)
             {
                 result_textbox.Clear();
             }
-
+            isOp = false;
             Button btn = (Button)sender;
 
             if (btn.Text == ".")
@@ -62,6 +65,35 @@ namespace cs_scientific_calculator
             plusMinus = double.Parse(result_textbox.Text);
             plusMinus = plusMinus * -1;
             result_textbox.Text = plusMinus.ToString();
+        }
+
+        private void times_Click(object sender, EventArgs e)
+        {
+            num1 = double.Parse(result_textbox.Text);
+            Button op = (Button)sender;
+            oprtr = op.Text;
+            isOp = true;
+
+        }
+
+        private void equal_Click(object sender, EventArgs e)
+        {
+            switch (oprtr)
+            {
+                case "+":
+                    result_textbox.Text = (num1 + double.Parse(result_textbox.Text)).ToString();
+                    break;
+                case "-":
+                    result_textbox.Text = (num1 - double.Parse(result_textbox.Text)).ToString();
+                    break;
+                case "*":
+                    result_textbox.Text = (num1 * double.Parse(result_textbox.Text)).ToString();
+                    break;
+                case "/":
+                    result_textbox.Text = (num1 / double.Parse(result_textbox.Text)).ToString();
+                    break;
+                
+            }
         }
     }
 }
