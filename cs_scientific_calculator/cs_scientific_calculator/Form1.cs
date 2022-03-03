@@ -213,5 +213,19 @@ namespace cs_scientific_calculator
             result = Math.Pow(double.Parse(result_textbox.Text), 2);
             result_textbox.Text = result.ToString();
         }
+
+        private void sin_Click(object sender, EventArgs e)
+        {
+            result = Math.Sin(double.Parse(result_textbox.Text));
+            operation_label.Text = "Sin(" + result_textbox.Text + ")";
+            result_textbox.Text = result.ToString();
+        }
+
+        private void sinh_Click(object sender, EventArgs e)
+        {
+            result = Math.Sinh(double.Parse(result_textbox.Text));
+            operation_label.Text = "Sinh(" + result_textbox.Text + ")";
+            result_textbox.Text = result.ToString();
+        }
     }
 }
