@@ -241,5 +241,19 @@ namespace cs_scientific_calculator
             operation_label.Text = "Cosh(" + result_textbox.Text + ")";
             result_textbox.Text = result.ToString();
         }
+
+        private void tan_Click(object sender, EventArgs e)
+        {
+            result = Math.Tan(double.Parse(result_textbox.Text));
+            operation_label.Text = "Tan(" + result_textbox.Text + ")";
+            result_textbox.Text = result.ToString();
+        }
+
+        private void tanh_Click(object sender, EventArgs e)
+        {
+            result = Math.Tanh(double.Parse(result_textbox.Text));
+            operation_label.Text = "Tanh(" + result_textbox.Text + ")";
+            result_textbox.Text = result.ToString();
+        }
     }
 }

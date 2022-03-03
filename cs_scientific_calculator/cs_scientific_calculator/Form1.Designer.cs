@@ -535,6 +535,7 @@ namespace cs_scientific_calculator
             this.tan.TabIndex = 10;
             this.tan.Text = "Tan";
             this.tan.UseVisualStyleBackColor = false;
+            this.tan.Click += new System.EventHandler(this.tan_Click);
             // 
             // tanh
             // 
@@ -546,6 +547,7 @@ namespace cs_scientific_calculator
             this.tanh.TabIndex = 10;
             this.tanh.Text = "Tanh";
             this.tanh.UseVisualStyleBackColor = false;
+            this.tanh.Click += new System.EventHandler(this.tanh_Click);
             // 
             // sci_cal
             // 
