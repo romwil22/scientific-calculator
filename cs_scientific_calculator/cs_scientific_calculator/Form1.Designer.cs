@@ -139,6 +139,7 @@ namespace cs_scientific_calculator
             this.e.TabIndex = 9;
             this.e.Text = "e";
             this.e.UseVisualStyleBackColor = false;
+            this.e.Click += new System.EventHandler(this.e_Click);
             // 
             // pi
             // 
@@ -184,6 +185,7 @@ namespace cs_scientific_calculator
             this.over_x.TabIndex = 11;
             this.over_x.Text = "1/x";
             this.over_x.UseVisualStyleBackColor = false;
+            this.over_x.Click += new System.EventHandler(this.over_x_Click);
             // 
             // abs
             // 
@@ -219,6 +221,7 @@ namespace cs_scientific_calculator
             this.mod.TabIndex = 11;
             this.mod.Text = "mod";
             this.mod.UseVisualStyleBackColor = false;
+            this.mod.Click += new System.EventHandler(this.mod_Click);
             // 
             // divide
             // 
@@ -394,6 +397,7 @@ namespace cs_scientific_calculator
             this.raise_x.TabIndex = 11;
             this.raise_x.Text = "10^x";
             this.raise_x.UseVisualStyleBackColor = false;
+            this.raise_x.Click += new System.EventHandler(this.raise_x_Click);
             // 
             // log
             // 
@@ -574,6 +578,7 @@ namespace cs_scientific_calculator
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "sci_cal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Scientific Calculator";
             this.ResumeLayout(false);
             this.PerformLayout();

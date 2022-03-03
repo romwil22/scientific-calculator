@@ -82,12 +82,14 @@ namespace cs_scientific_calculator
         private void sqrt_Click(object sender, EventArgs e)
         {
             result = Math.Sqrt(double.Parse(result_textbox.Text));
+            operation_label.Text = "sqrt(" + result_textbox.Text + ")";
             result_textbox.Text = result.ToString();
         }
 
         private void pi_Click(object sender, EventArgs e)
         {
             result = Math.PI;
+            operation_label.Text = "Pi";
             result_textbox.Text = result.ToString();
         }
 
@@ -146,6 +148,31 @@ namespace cs_scientific_calculator
                 isOperation = true;
             }
             
+        }
+
+        private void over_x_Click(object sender, EventArgs e)
+        {
+            result = 1 / double.Parse(result_textbox.Text);
+            operation_label.Text = "1 / " + result_textbox.Text;
+            result_textbox.Text = result.ToString();
+        }
+
+        private void e_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void raise_x_Click(object sender, EventArgs e)
+        {
+            result = Math.Pow(10, double.Parse(result_textbox.Text));
+            operation_label.Text = "10^" + result_textbox.Text;
+            result_textbox.Text = result.ToString();
+        }
+
+        private void mod_Click(object sender, EventArgs e)
+        {
+
+            result_textbox.Text = (result % double.Parse(result_textbox.Text)).ToString();
         }
     }
 }
