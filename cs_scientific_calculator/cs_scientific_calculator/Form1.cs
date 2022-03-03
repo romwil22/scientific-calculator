@@ -13,37 +13,15 @@ namespace cs_scientific_calculator
     public partial class sci_cal : Form
     {
         double plusMinus;
-        double num1;
         double result;
-        String oprtr;
-        bool isOp = false;
+        String opPerform;
+        bool isOperation = false;
         public sci_cal()
         {
             InitializeComponent();
         }
 
-        private void zero_Click(object sender, EventArgs e)
-        {
-            if (result_textbox.Text == "0" || isOp)
-            {
-                result_textbox.Clear();
-            }
-            isOp = false;
-            Button btn = (Button)sender;
-
-            if (btn.Text == ".")
-            {
-                if (result_textbox.Text.Contains("."))
-                {
-                    result_textbox.Text += btn.Text;
-                }
-                
-            }
-            else
-            {
-                result_textbox.Text += btn.Text;
-            }
-        }
+        
 
         private void back_Click(object sender, EventArgs e)
         {
@@ -59,6 +37,8 @@ namespace cs_scientific_calculator
         private void ce_Click(object sender, EventArgs e)
         {
             result_textbox.Text = "0";
+            result = 0;
+            operation_label.Text = "";
         }
 
         private void plus_over_minus_Click(object sender, EventArgs e)
@@ -68,30 +48,23 @@ namespace cs_scientific_calculator
             result_textbox.Text = plusMinus.ToString();
         }
 
-        private void times_Click(object sender, EventArgs e)
-        {
-            num1 = double.Parse(result_textbox.Text);
-            Button op = (Button)sender;
-            oprtr = op.Text;
-            isOp = true;
-
-        }
+        
 
         private void equal_Click(object sender, EventArgs e)
         {
-            switch (oprtr)
+            switch (opPerform)
             {
                 case "+":
-                    result_textbox.Text = (num1 + double.Parse(result_textbox.Text)).ToString();
+                    result_textbox.Text = (result + double.Parse(result_textbox.Text)).ToString();
                     break;
                 case "-":
-                    result_textbox.Text = (num1 - double.Parse(result_textbox.Text)).ToString();
+                    result_textbox.Text = (result - double.Parse(result_textbox.Text)).ToString();
                     break;
                 case "*":
-                    result_textbox.Text = (num1 * double.Parse(result_textbox.Text)).ToString();
+                    result_textbox.Text = (result * double.Parse(result_textbox.Text)).ToString();
                     break;
                 case "/":
-                    result_textbox.Text = (num1 / double.Parse(result_textbox.Text)).ToString();
+                    result_textbox.Text = (result / double.Parse(result_textbox.Text)).ToString();
                     break;
                 
             }
@@ -125,6 +98,39 @@ namespace cs_scientific_calculator
         {
             result = Math.Exp(double.Parse(result_textbox.Text));
             result_textbox.Text = result.ToString();
+        }
+
+        private void number_click(object sender, EventArgs e)
+        {
+            if ((result_textbox.Text == "0") || isOperation)
+            {
+                result_textbox.Clear();
+            }
+
+            isOperation = false;
+            Button numbers = (Button)sender;
+
+            if (numbers.Text == ".")
+            {
+                if (!result_textbox.Text.Contains("."))
+                {
+                    result_textbox.Text = result_textbox.Text + numbers.Text;
+                }
+            }
+            else
+            {
+                result_textbox.Text = result_textbox.Text + numbers.Text;
+            }
+            
+        }
+
+        private void operators_Click(object sender, EventArgs e)
+        {
+            Button operatorsButton = (Button)sender;
+            opPerform = operatorsButton.Text;
+            result = double.Parse(result_textbox.Text);
+            operation_label.Text = result.ToString() + " " + opPerform;
+            isOperation = true;
         }
     }
 }
