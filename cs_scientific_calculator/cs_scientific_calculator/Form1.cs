@@ -211,7 +211,8 @@ namespace cs_scientific_calculator
         private void square_Click(object sender, EventArgs e)
         {
             result = Math.Pow(double.Parse(result_textbox.Text), 2);
-            result_textbox.Text = result.ToString();
+            operation_label.Text = result_textbox.Text+"^2";
+            result_textbox.Text = result.ToString(); 
         }
 
         private void sin_Click(object sender, EventArgs e)
