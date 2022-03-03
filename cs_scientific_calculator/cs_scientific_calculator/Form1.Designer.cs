@@ -174,6 +174,7 @@ namespace cs_scientific_calculator
             this.square.TabIndex = 11;
             this.square.Text = "x^2";
             this.square.UseVisualStyleBackColor = false;
+            this.square.Click += new System.EventHandler(this.square_Click);
             // 
             // over_x
             // 
@@ -245,6 +246,7 @@ namespace cs_scientific_calculator
             this.factorial.TabIndex = 11;
             this.factorial.Text = "n!";
             this.factorial.UseVisualStyleBackColor = false;
+            this.factorial.Click += new System.EventHandler(this.factorial_Click);
             // 
             // close_parenthesis
             // 
@@ -517,6 +519,7 @@ namespace cs_scientific_calculator
             this.ln.TabIndex = 11;
             this.ln.Text = "ln";
             this.ln.UseVisualStyleBackColor = false;
+            this.ln.Click += new System.EventHandler(this.ln_Click);
             // 
             // operation_label
             // 

@@ -76,6 +76,7 @@ namespace cs_scientific_calculator
         private void log_Click(object sender, EventArgs e)
         {
             result = Math.Log10(double.Parse(result_textbox.Text));
+            operation_label.Text = "log(" + result_textbox.Text + ")";
             result_textbox.Text = result.ToString();
         }
 
@@ -159,7 +160,8 @@ namespace cs_scientific_calculator
 
         private void e_Click(object sender, EventArgs e)
         {
-
+            result = Math.E;
+            result_textbox.Text = result.ToString();
         }
 
         private void raise_x_Click(object sender, EventArgs e)
@@ -173,6 +175,43 @@ namespace cs_scientific_calculator
         {
 
             result_textbox.Text = (result % double.Parse(result_textbox.Text)).ToString();
+        }
+
+        private void ln_Click(object sender, EventArgs e)
+        {
+            result = Math.Log10(double.Parse(result_textbox.Text));
+            operation_label.Text = "ln(" + result_textbox.Text + ")";
+            result_textbox.Text = result.ToString();
+        }
+
+        private void factorial_Click(object sender, EventArgs e)
+        {
+            result = int.Parse(result_textbox.Text);
+            int factorial = 1;
+
+            if (result < 0)
+            {
+                result_textbox.Text = "Syntax Error";
+            }
+            else if (result == 1)
+            {
+                result_textbox.Text = result.ToString();
+            }
+            else
+            {
+                for (int count = (int)result; count >= 2 ; count--)
+                {
+                    factorial *= count;
+                }
+
+                result_textbox.Text = factorial.ToString();
+            }
+        }
+
+        private void square_Click(object sender, EventArgs e)
+        {
+            result = Math.Pow(double.Parse(result_textbox.Text), 2);
+            result_textbox.Text = result.ToString();
         }
     }
 }
