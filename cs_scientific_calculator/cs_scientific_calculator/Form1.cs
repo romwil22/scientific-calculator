@@ -66,8 +66,11 @@ namespace cs_scientific_calculator
                 case "/":
                     result_textbox.Text = (result / double.Parse(result_textbox.Text)).ToString();
                     break;
-                
+                default:
+                    break;
             }
+            result = double.Parse(result_textbox.Text);
+            operation_label.Text = ""; 
         }
 
         private void log_Click(object sender, EventArgs e)
@@ -127,10 +130,22 @@ namespace cs_scientific_calculator
         private void operators_Click(object sender, EventArgs e)
         {
             Button operatorsButton = (Button)sender;
-            opPerform = operatorsButton.Text;
-            result = double.Parse(result_textbox.Text);
-            operation_label.Text = result.ToString() + " " + opPerform;
-            isOperation = true;
+
+            if (result != 0)
+            {
+                equal.PerformClick();
+                opPerform = operatorsButton.Text;
+                operation_label.Text = result.ToString() + " " + opPerform;
+                isOperation = true;
+            }
+            else
+            {
+                opPerform = operatorsButton.Text;
+                result = double.Parse(result_textbox.Text);
+                operation_label.Text = result.ToString() + " " + opPerform;
+                isOperation = true;
+            }
+            
         }
     }
 }
