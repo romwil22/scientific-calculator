@@ -511,6 +511,7 @@ namespace cs_scientific_calculator
             this.cos.TabIndex = 10;
             this.cos.Text = "Cos";
             this.cos.UseVisualStyleBackColor = false;
+            this.cos.Click += new System.EventHandler(this.cos_Click);
             // 
             // cosh
             // 
@@ -522,6 +523,7 @@ namespace cs_scientific_calculator
             this.cosh.TabIndex = 10;
             this.cosh.Text = "Cosh";
             this.cosh.UseVisualStyleBackColor = false;
+            this.cosh.Click += new System.EventHandler(this.cosh_Click);
             // 
             // tan
             // 

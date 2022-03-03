@@ -227,5 +227,19 @@ namespace cs_scientific_calculator
             operation_label.Text = "Sinh(" + result_textbox.Text + ")";
             result_textbox.Text = result.ToString();
         }
+
+        private void cos_Click(object sender, EventArgs e)
+        {
+            result = Math.Cos(double.Parse(result_textbox.Text));
+            operation_label.Text = "Cos(" + result_textbox.Text + ")";
+            result_textbox.Text = result.ToString();
+        }
+
+        private void cosh_Click(object sender, EventArgs e)
+        {
+            result = Math.Cosh(double.Parse(result_textbox.Text));
+            operation_label.Text = "Cosh(" + result_textbox.Text + ")";
+            result_textbox.Text = result.ToString();
+        }
     }
 }
